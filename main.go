@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	//Algoritmos de SEQUÊNCIA
+	// ALGORITMOS DE SEQUÊNCIA
 
 	// 1. Faça um algoritmo que leia três números inteiros e mostre a soma entre eles.
 
@@ -145,7 +145,7 @@ func main() {
 	var libras float64 = quilos * 2.205
 	fmt.Println("Você pesa", libras, "libras.")
 
-	//Algoritmos de SELEÇÃO
+	// ALGORITMOS DE SELEÇÃO
 
 	// 1. Faça um algoritmo que leia dois números inteiros e mostre o maior deles.
 
@@ -354,4 +354,104 @@ func main() {
 	} else {
 		fmt.Println("Você está na categoria adulto.")
 	}
+
+	// ALGORITMOS DE REPETIÇÃO
+
+	// 1. Faça um algoritmo que imprima os números de 1 a 10 em ordem crescente.
+
+	for i := 0; i < 11; i++ {
+		fmt.Println(i)
+	}
+
+	// 2. Faça um algoritmo que imprima os números pares de 0 a 20.
+
+	for i := 2; i < 21; i++ {
+		if i%2 == 0 {
+			fmt.Println(i)
+		}
+	}
+
+	// 3. Faça um algoritmo que imprima os números ímpares de 1 a 19.
+
+	for i := 1; i < 20; i++ {
+		if i%2 != 0 {
+			fmt.Println(i)
+		}
+	}
+
+	// 4. Faça um algoritmo que imprima os múltiplos de 3 de 0 a 30.
+
+	for i := 0; i < 31; i++ {
+		if i%3 == 0 {
+			fmt.Println(i)
+		}
+	}
+
+	// 5. Faça um algoritmo que imprima os números de 10 a 1 em ordem decrescente.
+
+	for i := 10; i >= 1; i-- {
+		fmt.Println(i)
+	}
+
+	// 6. Faça um algoritmo que imprima a tabuada de multiplicação de 1 a 10 para um número fornecido pelo usuário.
+
+	var nq int
+	fmt.Print("Escolha um número qualquer: ")
+	fmt.Scan(&nq)
+	fmt.Println(nq, "é um excelente número! :)")
+
+	for i := 1; i < 11; i++ {
+		fmt.Println(nq * i)
+	}
+
+	// 7. Faça um algoritmo que imprima os números de 1 a 100, substituindo os múltiplos de 3 pela palavra "Fizz" e os múltiplos de 5 pela palavra "Buzz". Para os números que são múltiplos de ambos, utilize a palavra "FizzBuzz".
+
+	for i := 1; i < 101; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("FizzBuzz")
+		} else if i%3 == 0 {
+			fmt.Println("Fizz")
+		} else if i%5 == 0 {
+			fmt.Println("Buzz")
+		} else {
+			fmt.Println(i)
+		}
+	}
+
+	// 8. Faça um algoritmo que leia um número inteiro positivo e mostre todos os seus divisores.
+
+	var pos int
+	fmt.Print("Escolha um número: ")
+	fmt.Scan(&pos)
+	fmt.Println(pos, "é um número ótimo para operarnos! :)")
+
+	for i := 1; i >= 1; i++ {
+		if pos%i == 0 {
+			fmt.Println(i)
+		}
+	}
+
+	// 9. Faça um algoritmo que leia vários números inteiros e mostre a média aritmética entre eles. A leitura deve ser interrompida quando for lido o valor zero.
+
+	var a1 int
+	fmt.Print("Escolha um número: ")
+	fmt.Scan(&a1)
+	fmt.Println(a1, "é um excelente número! ;)")
+
+	var a2 int
+	fmt.Print("Escolha um outro número: ")
+	fmt.Scan(&a2)
+	fmt.Println(a2, "é um ótimo número! ;)")
+
+	var a3 int
+	fmt.Print("Selecione um outro número: ")
+	fmt.Scan(&a3)
+	fmt.Println(a3, "é outro número muito bom! ;)")
+
+	// E assim continua com vários outros números, mas a essência é essa.
+
+	var ma int = (a1 + a2 + a3) / 3
+	fmt.Println(ma, "é a média aritmética dos números escolhidos.")
+
+	// A questão 9 está incompleta, ainda vou terminá-la e vou fazer a 10.
 }
