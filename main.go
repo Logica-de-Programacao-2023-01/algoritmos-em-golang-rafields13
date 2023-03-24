@@ -433,25 +433,38 @@ func main() {
 
 	// 9. Faça um algoritmo que leia vários números inteiros e mostre a média aritmética entre eles. A leitura deve ser interrompida quando for lido o valor zero.
 
-	var a1 int
-	fmt.Print("Escolha um número: ")
-	fmt.Scan(&a1)
-	fmt.Println(a1, "é um excelente número! ;)")
+	var num, sum float64
+	var count int
 
-	var a2 int
-	fmt.Print("Escolha um outro número: ")
-	fmt.Scan(&a2)
-	fmt.Println(a2, "é um ótimo número! ;)")
+	for {
+		fmt.Print("Digite uma sequência de números inteiros, e 0 para encerrar: ")
+		fmt.Scan(&num)
+		if num == 0 {
+			break
+		}
+		sum += num
+		count++
+	}
+	if count > 0 {
+		media := sum / float64(count)
+		fmt.Printf("A média dos %v números lidos é: %.2f.", count, media)
+	} else {
+		fmt.Println("Nenhum número foi lido.")
+	}
 
-	var a3 int
-	fmt.Print("Selecione um outro número: ")
-	fmt.Scan(&a3)
-	fmt.Println(a3, "é outro número muito bom! ;)")
+	// 10. Faça um algoritmo que leia vários números inteiros e mostre o maior deles. A leitura deve ser interrompida quando for lido o valor zero.
 
-	// E assim continua com vários outros números, mas a essência é essa.
+	var numb, maior int
+	fmt.Println("Digite uma sequência de números inteiros, e 0 para encerrar:")
+	fmt.Scan(&numb)
 
-	var ma int = (a1 + a2 + a3) / 3
-	fmt.Println(ma, "é a média aritmética dos números escolhidos.")
+	maior = numb
 
-	// A questão 9 está incompleta, ainda vou terminá-la e vou fazer a 10.
+	for numb != 0 {
+		if numb > maior {
+			maior = numb
+		}
+		fmt.Scan(&numb)
+	}
+	fmt.Printf("O maior número é %d.", maior)
 }
